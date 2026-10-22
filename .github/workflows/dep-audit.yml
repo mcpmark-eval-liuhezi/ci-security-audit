@@ -1,0 +1,13 @@
+name: Dependency Audit Dry Run
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report dry run completion
+        run: echo "Audit dry run completed"
